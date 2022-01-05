@@ -6,15 +6,14 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {# the CSS file lives at "public/css/blog.css" #}
-        <link href="{{ asset('app.css') }}" rel="stylesheet"/>
+        
         {# the JS file lives at "public/bundles/acme/js/loader.js" #}
         <script src="{{ asset('script.js') }}"></script>
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+        <link href="{{ asset('styles/app.css') }}" rel="stylesheet"/>
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
@@ -28,9 +27,9 @@
                 <li><a href="{{ path('register') }}">Espace Producteur</a></li>
                 <li><a href="{{ path('login') }}">Déja inscrit ?</a></li>
             </ul>
-        
+        </header>
         {% endblock %}
-            </header>
+            
                 
         
   
