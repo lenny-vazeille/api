@@ -3,3 +3,18 @@ ul{
     justify-content: space-around;
 
 }
+.form-register{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+display: flex;
+justify-content: space-around;
+margin: 5%;
+}
