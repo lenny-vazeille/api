@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Article
+{% endblock %}
+
+{% block body %}
+
+
+	{% for wine_rose in wine_roses  %}
+		{# {{article.title}} #}
+		<div class="article text-center">
+			<h1 class="text-center">
+				{{wine_rose.titre}}</h1>
+			{# <p class="text-center"> {{article.titre}}</p> #}
+			<div class="article-image">
+				<img src={{wine_rose.getImageArticle}} alt="">
+				<div class="contenu">
+					<h1>Content</h1>
+					<p>{{wine_rose.contenu}}</p>
+
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+
+
+{% endblock %}
