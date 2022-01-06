@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "af201386e7a2845644386d1a5794e3c4",
+=======
+    "content-hash": "7121776e0daadd1b8795bd3cc22a1906",
+>>>>>>> parent of ad4926bb (Merge pull request #1 from lenny-vazeille/test-rebase)
     "packages": [
         {
             "name": "api-platform/core",
@@ -10391,5 +10395,9 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
+<<<<<<< HEAD
     "plugin-api-version": "2.1.0"
+=======
+    "plugin-api-version": "2.2.0"
+>>>>>>> parent of ad4926bb (Merge pull request #1 from lenny-vazeille/test-rebase)
 }
