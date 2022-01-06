@@ -1,22 +1,49 @@
-ul{
+* {}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+ul {
     display: flex;
     justify-content: space-around;
 
 }
-.form-register{
+
+.form-register {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
-h1{
+
+h1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-form{
-display: flex;
-justify-content: space-around;
-margin: 5%;
-padding: 5%;
+
+form {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+    padding: 5%;
+}
+
+.container_article {
+    display: flex;
+    justify-content: center;
+}
+
+.wine {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+    padding: 1%;
+    border: solid darkblue 1px;
+    border-radius: 1%;
 }
