@@ -17,26 +17,43 @@
 		{% block javascripts %}{% endblock %}
 	</head>
 	<body>
-		{% block header %}
-			<header>
-				<ul>
-					<li><ahref="{{path('home_page')}}">Home</a></li>
-					<li><ahref="{{path('register')}}">Espace consomateur</a></li>
-					<li><ahref="{{path('register')}}">Espace Producteur</a></li>
-					<li><ahref="{{path('login')}}">Déja inscrit ?</a></li>
-				</ul>
-			</header>
-		{% endblock %}
+
 		{% block body %}
+			{% block header %}
+				<header>
+					<ul>
+						<li><ahref="{{path('home_page')}}">Home</a></li>
+						<li><ahref="{{path('register')}}">Espace consomateur</a></li>
+						<li><ahref="{{path('register')}}">Espace Producteur</a></li>
+						<li><ahref="{{path('login')}}">Déja inscrit ?</a></li>
+					</ul>
+				</header>
+			{% endblock %}
 			<div class="title">
 				<h1>Wine Search</h1>
 			</div>
-			<div class="container_article">
-				<div class="wine">wine_red</div>
-				<div class="wine">wine_rose</div>
-				<div class="wine">wine_white</div>
-			</div>
-
+			{% block caroussel %}
+				<div class="container_article">
+					<div class="wine">
+						<h1>wine_red</h1>
+						<div class="wine-picture">
+							<a href="#">picture</a>
+						</div>
+					</div>
+					<div class="wine">
+						<h1>wine_rose</h1>
+						<div class="wine-picture">
+							<a href="#">picture</a>
+						</div>
+					</div>
+					<div class="wine">
+						<h1>wine_white</h1>
+						<div class="wine-picture">
+							<a href="#">picture</a>
+						</div>
+					</div>
+				</div>
+			{% endblock %}
 
 		{% endblock %}
 		{% block footer %}
