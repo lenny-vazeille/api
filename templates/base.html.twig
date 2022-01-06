@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Wine App{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {# the CSS file lives at "public/css/blog.css" #}
-        
-        {# the JS file lives at "public/bundles/acme/js/loader.js" #}
-        <script src="{{ asset('script.js') }}"></script>
-        {% block stylesheets %}
-        <link href="{{ asset('styles/app.css') }}" rel="stylesheet"/>
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Wine App
+			{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		{# the CSS file lives at "public/css/blog.css" #}
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-    {% block header %}
-        <header>
-            <ul>
-                <li><a href="{{ path('home_page') }}">Home</a></li>
-                <li><a href="{{ path('register') }}">Espace consomateur</a></li>
-                <li><a href="{{ path('register') }}">Espace Producteur</a></li>
-                <li><a href="{{ path('login') }}">Déja inscrit ?</a></li>
-            </ul>
-        </header>
-        {% endblock %}
-        {% block body %}
-        <div class="title">
-            <h1>Wine Search</h1>
-        </div>
-        div.
-                
-        
-  
-        {% endblock %}  
-        {% block footer %}
-        <footer>
-            <ul>
-                <li><a href="{{ path('home_page') }}">Home</a></li>
-                <li><a href="{{ path('register') }}">Espace consomateur</a></li>
-                <li><a href="{{ path('register') }}">Espace Producteur</a></li>
-                <li><a href="{{ path('login') }}">Déja inscrit ?</a></li>
-            </ul>
-        </footer>
-        {% endblock %}
-    </body>
+		{# the JS file lives at "public/bundles/acme/js/loader.js" #}<script src="{{ asset('script.js') }}"> </script>
+		{% block stylesheets %}
+			<link href="{{ asset('styles/app.css') }}" rel="stylesheet"/>
+		{% endblock %}
+
+		{% block javascripts %}{% endblock %}
+	</head>
+	<body>
+		{% block header %}
+			<header>
+				<ul>
+					<li><ahref="{{path('home_page')}}">Home</a></li>
+					<li><ahref="{{path('register')}}">Espace consomateur</a></li>
+					<li><ahref="{{path('register')}}">Espace Producteur</a></li>
+					<li><ahref="{{path('login')}}">Déja inscrit ?</a></li>
+				</ul>
+			</header>
+		{% endblock %}
+		{% block body %}
+			<div class="title">
+				<h1>Wine Search</h1>
+			</div>
+			<div class="container_article">
+				<div class="wine">wine_red</div>
+				<div class="wine">wine_rose</div>
+				<div class="wine">wine_white</div>
+			</div>
+
+
+		{% endblock %}
+		{% block footer %}
+			<footer>
+				<ul>
+					<li><ahref="{{path('home_page')}}">Home</a></li>
+					<li><ahref="{{path('register')}}">Espace consomateur</a></li>
+					<li><ahref="{{path('register')}}">Espace Producteur</a></li>
+					<li><ahref="{{path('login')}}">Déja inscrit ?</a></li>
+				</ul>
+			</footer>
+		{% endblock %}
+	</body>
 </html>
