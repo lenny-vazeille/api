@@ -17,9 +17,7 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}
-         
-        {% block header %}
+    {% block header %}
         <header>
             <ul>
                 <li><a href="{{ path('home_page') }}">Home</a></li>
@@ -29,10 +27,21 @@
             </ul>
         </header>
         {% endblock %}
-            
+        {% block body %}
+     
                 
         
   
+        {% endblock %}
+        {% block footer %}
+        <footer>
+            <ul>
+                <li><a href="{{ path('home_page') }}">Home</a></li>
+                <li><a href="{{ path('register') }}">Espace consomateur</a></li>
+                <li><a href="{{ path('register') }}">Espace Producteur</a></li>
+                <li><a href="{{ path('login') }}">Déja inscrit ?</a></li>
+            </ul>
+        </footer>
         {% endblock %}
     </body>
 </html>
