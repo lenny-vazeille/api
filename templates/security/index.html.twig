@@ -7,7 +7,16 @@
 {% block body %}
 {# templates/security/login.html.twig #}
 {# ... you will probably extend your base template, like base.html.twig #}
-
+ {% block header %}
+ <header>
+            <ul>
+                <li><a href="{{ path('home_page') }}">Home</a></li>
+                <li><a href="{{ path('register') }}">Espace consomateur</a></li>
+                <li><a href="{{ path('register') }}">Espace Producteur</a></li>
+                <li><a href="{{ path('login') }}">Déja inscrit ?</a></li>
+            </ul>
+</header>
+{% endblock %}
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
