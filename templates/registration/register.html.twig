@@ -3,6 +3,7 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
+<<<<<<< HEAD
 {% block header %}
  <header>
             <ul>
@@ -16,14 +17,17 @@
 <h1>Register</h1>
 
 <div class="form-register">
+=======
+    <h1>Register</h1>
+>>>>>>> parent of ad4926bb (Merge pull request #1 from lenny-vazeille/test-rebase)
 
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
         {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
-</div>
-    
 {% endblock %}
