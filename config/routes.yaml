@@ -1,6 +1,6 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
 login:
     path:       /login
     controller: App\Controller\SecurityController::login
@@ -14,20 +14,21 @@ register:
 app_logout:
     path: /logout
     methods: GET
-# wine_red:
-#     path: /wine_red
-#     controller:
-#     methods: GET|POST
+    
+wine_red:
+    path: /wine_red
+    controller: App\Controller\HomePageController::wine_red
+    methods: GET|POST
 
-# wine_red:
-#     path: /wine_rose
-#     controller:
-#     methods: GET|POST
+wine_rose:
+    path: /wine_rose
+    controller: App\Controller\HomePageController::wine_rose
+    methods: GET|POST
 
-# wine_red:
-#     path: /wine_white
-#     controller:
-#     methods: GET|POST
+wine_white:
+    path: /wine_white
+    controller: App\Controller\HomePageController::wine_white
+    methods: GET|POST
 # A venir si ont crée un éspace utilisateurs
 # users:
 #     path: /profile
