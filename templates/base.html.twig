@@ -21,23 +21,33 @@
 		{% block body %}
 			{% block header %}
 				<header>
-                 <div class="container_identity">
-				    <div class="title">
-						<h1>Wine Search</h1>
-						<p>Le vin j'aime ça !</p>
-			        </div>
+					<div class="container_identity">
 
-                    <img src="{{ asset('img/logo_black_bckg/grape512x512-1.png') }}" alt="logo" >	
+						<nav class="menu"> 
+							<ul>
+								<li><a href="{{path('home_page')}}">Home</a> | </li> 
+								<li><a href="{{path('register')}}">Espace consomateur</a> | </li>
+								<li><a href="{{path('register')}}">Espace Producteur</a> | </li>
+								<li><a href="{{path('login')}}">Déja inscrit ?</a>  </li>
+							</ul>
+						</nav>
+						
+						<div class="identity_title">
+
+							<div class="title">
+									<h1 class="title">Wine Search</h1>
+							</div>
+							<div class="logo">
+							   <img src="{{ asset('img/logo_black_bckg/grape512x512-1.png') }}" alt="logo" class="logo_size">	
+							</div>
+							
+						</div>
+						
+						
+						
+						
+					</div>
 					
-					<ul>
-						<li><a href="{{path('home_page')}}">Home</a> | </li> 
-						<li><a href="{{path('register')}}">Espace consomateur</a> | </li>
-						<li><a href="{{path('register')}}">Espace Producteur</a> | </li>
-						<li><a href="{{path('login')}}">Déja inscrit ?</a>  </li>
-	                </ul>
-					
-                </div>
-				
 				</header>
 			{% endblock %}
 			
