@@ -1,33 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Register
+{% endblock %}
 
 {% block body %}
-<<<<<<< HEAD
-{% block header %}
- <header>
-            <ul>
-                <li><a href="{{ path('home_page') }}">Home</a></li>
-                <li><a href="{{ path('register') }}">Espace consomateur</a></li>
-                <li><a href="{{ path('register') }}">Espace Producteur</a></li>
-                <li><a href="{{ path('login') }}">Déja inscrit ?</a></li>
-            </ul>
-</header>
-{% endblock %}
-<h1>Register</h1>
+	{% block header %}
+		<header>
+			<ul>
+				<li><ahref="{{path('home_page')}}">Home</a></li>
+				<li><ahref="{{path('register')}}">Espace consomateur</a></li>
+				<li><ahref="{{path('register')}}">Espace Producteur</a></li>
+				<li><ahref="{{path('login')}}">Déja inscrit ?</a></li>
+			</ul>
+		</header>
+	{% endblock %}
+	<h1>Register</h1>
 
-<div class="form-register">
-=======
-    <h1>Register</h1>
->>>>>>> parent of ad4926bb (Merge pull request #1 from lenny-vazeille/test-rebase)
+	<div class="form-register">
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
+		{{ form_start(registrationForm) }}
+		{{ form_row(registrationForm.email) }}
+		{{ form_row(registrationForm.plainPassword, {
             label: 'Password'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+		{{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
-{% endblock %}
+		<button type="submit" class="btn">Register</button>
+		{{ form_end(registrationForm) }}
+	{% endblock %}
