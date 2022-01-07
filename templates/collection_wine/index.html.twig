@@ -1,11 +1,28 @@
 {% extends 'base.html.twig' %}
+{# CETTE PAGE ME SERT DE BASE JUSTE | ELLE MARCHE SUR UN AUTRE PROJET #}
 
-{% block title %}Wine App
-
+{% block title %}Article
 {% endblock %}
 
 {% block body %}
-   
 
-    
+
+	{% for collection_wine in collection_wines  %}
+		{# {{article.title}} #}
+		<div class="article text-center">
+			<h1 class="text-center">
+				{{article.titre}}</h1>
+			{# <p class="text-center"> {{article.titre}}</p> #}
+			<div class="article-image">
+				<img src={{article.getImageArticle}} alt="">
+				<div class="contenu">
+					<h1>Content</h1>
+					<p>{{article.contenu}}</p>
+
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+
+
 {% endblock %}
