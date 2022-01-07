@@ -23,7 +23,7 @@ class HomePageController extends AbstractController
      */
     public function wine_red(): Response
     {
-        return $this->render('home_page/wine_red.html.twig', [
+        return $this->render('wine_red/index.html.twig', [
             'controller_name' => 'HomePageController',
         ]);
     }
@@ -33,7 +33,7 @@ class HomePageController extends AbstractController
      */
     public function wine_rose(): Response
     {
-        return $this->render('home_page/wine_rose.html.twig', [
+        return $this->render('wine_rose/index.html.twig', [
             'controller_name' => 'HomePageController',
         ]);
     }
@@ -43,7 +43,7 @@ class HomePageController extends AbstractController
      */
     public function wine_white(): Response
     {
-        return $this->render('home_page/wine_white.html.twig', [
+        return $this->render('wine_white/index.html.twig', [
             'controller_name' => 'HomePageController',
         ]);
     }
@@ -53,7 +53,7 @@ class HomePageController extends AbstractController
      */
     public function collection_wine(): Response
     {
-        return $this->render('home_page/collection_wine.html.twig', [
+        return $this->render('collection_wine/index.html.twig', [
             'controller_name' => 'HomePageController',
         ]);
     }
