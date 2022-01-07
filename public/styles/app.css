@@ -1,4 +1,62 @@
-* {}
+/***************** GRAPHIC CHART *****************/
+
+
+/* Color Theme Swatches in Hex */
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-1-hex {
+    color: #511201;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-2-hex {
+    color: #AD160F;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-3-hex {
+    color: #F0F2F2;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-4-hex {
+    color: #F8E8E8;
+}
+
+.color-theme_280px-Glass_of_Red_Wine_with_a_bottle_of_Red_Wine_-_Evan_Swigart-5-hex {
+    color: #F2E5BD;
+}
+
+
+/* Font */
+
+@font-face {
+    font-family: "Playfair Display', serif";
+    src: url("./../Font/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("ttf"), url("./../Font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("ttf");
+}
+
+
+/**  Variables **/
+
+:root {
+    --h1-font: 8rem;
+    --h2-font: 4rem;
+    --h3-font: 3rem;
+    --p-font: 1rem;
+    /* Light mode */
+    --h1-light-color: #AD160F;
+    --h2-light-color: #511201;
+    --h3-light-color: #000000;
+    --p-light-color: #511201;
+    --logo-light-mode: url("./../img/logo_black_bckg/grape512x512-1.png");
+    /* Dark mode  */
+    --h1-dark-color: #AD160F;
+    --h2-dark-color: #F2E5BD;
+    --h3-dark-color: #F8E8E8;
+    --p-dark-color: #F0F2F2;
+    --logo-dark-mode: url("./../img/logo_black_bckg/grape512x512-2.png");
+}
+
+* {
+  
+
+}
 
 body {
     margin: 0;
@@ -11,7 +69,6 @@ body {
 ul {
     display: flex;
     justify-content: space-around;
-
 }
 
 .form-register {
@@ -20,11 +77,43 @@ ul {
     align-items: center;
     width: 100%;
 }
-
+/* Momo font size + color */
 h1 {
+    font-size: var(--h1-font);
     display: flex;
+    color: var(--h1-light-color);
     justify-content: center;
     align-items: center;
+}
+/* h2 */
+h2 {
+    font-size: var(--h2-font);
+    display: flex;
+    color: var(--h2-light-color);
+    justify-content: center;
+    align-items: center;
+}
+/* h3 */
+h3 {
+    font-size: var(--h3-font);
+    display: flex;
+    color: var(--h3-light-color);
+    justify-content: center;
+    align-items: center;
+}
+
+/* p */
+p {
+    font-size: var(--p-font);
+    display: flex;
+    color: var(--p-light-color);
+    justify-content: center;
+    align-items: center;
+}
+a {
+   text-decoration: none;
+   list-style: none;
+
 }
 
 form {
@@ -48,5 +137,3 @@ form {
     border: solid darkblue 1px;
     border-radius: 1%;
 }
-
-.test {}
