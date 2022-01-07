@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: api-wine-list
--- Generation Time: 2022-01-03 16:23:25.4950
+-- Generation Time: 2022-01-07 15:20:45.0880
 -- -------------------------------------------------------------
 
 
@@ -41,7 +41,7 @@ CREATE TABLE `user` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS `wine_red`;
 CREATE TABLE `wine_red` (
@@ -103,13 +103,17 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 ('DoctrineMigrations\\Version20211206124001', '2021-12-06 12:40:09', 153),
 ('DoctrineMigrations\\Version20211206140051', '2021-12-06 14:00:58', 142),
 ('DoctrineMigrations\\Version20211206140519', '2021-12-06 14:05:49', 156),
-('DoctrineMigrations\\Version20220103144752', '2022-01-03 14:48:07', 226);
+('DoctrineMigrations\\Version20220103144752', '2022-01-03 14:48:07', 226),
+('DoctrineMigrations\\Version20220107124920', '2022-01-07 12:49:27', 115);
 
 INSERT INTO `user` (`id`, `email`, `roles`, `password`) VALUES
-(1, 'morgan@live.fr', '[]', '$2y$13$r.euzvt1eRLD0BG3f9Wp4OE72JxJbj3iQHd3MsV6KzEeZb3kGPkLC'),
-(2, 'lenny@live.fr', '[]', '$2y$13$sCJPcARqarSSTrBAeWWNxusogB3YhGaL0dgBnYXmTHYW7EuOOAlz2'),
-(3, 'sofiane@live.fr', '[]', '$2y$13$5RlGl6kvsuREoNY75MoCsOPZ0Fp7V4xDlXgi5.Jl77EXiYkniHm7O'),
-(4, 'valentin@live.fr', '[]', '$2y$13$Eh6JdlH8g7iQI.fEFHj1uuxByeMNCcPlDilwoxoK9UNkW.5DZerau');
+(1, 'morgan@live.fr', '[\"ROLE_ADMIN\"]', '$2y$13$r.euzvt1eRLD0BG3f9Wp4OE72JxJbj3iQHd3MsV6KzEeZb3kGPkLC'),
+(2, 'lenny@live.fr', '[\"ROLE_ADMIN\"]', '$2y$13$sCJPcARqarSSTrBAeWWNxusogB3YhGaL0dgBnYXmTHYW7EuOOAlz2'),
+(3, 'sofiane@live.fr', '[\"ROLE_ADMIN\"]', '$2y$13$5RlGl6kvsuREoNY75MoCsOPZ0Fp7V4xDlXgi5.Jl77EXiYkniHm7O'),
+(4, 'valentin@live.fr', '[\"ROLE_PRO\"]', '$2y$13$Eh6JdlH8g7iQI.fEFHj1uuxByeMNCcPlDilwoxoK9UNkW.5DZerau'),
+(6, 'pro@gmail.com', '[\"ROLE_PRO\"]', '$2y$13$rR0gvSgrN9nAQcDR.2LwpOZBMO5XrlUGC9vxzKlOeQ3IpG5PzCpmC'),
+(7, 'david@live.fr', '[]', '$2y$13$N7/ISNDuHOv3DjOHr7PKs.d2TZCAqyStbaIFBM.wvYgjFUun4uSlS'),
+(8, 'benoit1329@live.com', '[]', '$2y$13$2C2AYzkHQiUFCVyEkam/zOsDyTwatumh9FTUy/kuPsA0f1C7.OwnW');
 
 INSERT INTO `wine_red` (`id`, `title`, `origin`, `liters`, `prices`, `wine_year`, `email`, `published_date`) VALUES
 (4, 'bordeaux', 'bordeaux', 1.00, 10.00, '10', 'ferfer', '0000-00-00 00:00:00'),

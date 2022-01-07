@@ -39,18 +39,24 @@
     --h2-font: 4rem;
     --h3-font: 3rem;
     --p-font: 1rem;
+    --a-color: #511201;
+    --a-font: 1rem bold;
+    --a-font-family: "Playfair Display', serif";
     /* Light mode */
     --h1-light-color: #AD160F;
     --h2-light-color: #511201;
     --h3-light-color: #000000;
     --p-light-color: #511201;
-    --logo-light-mode: url("./../img/logo_black_bckg/grape512x512-1.png");
+    --logo-light-mode: url("./../img/logo_black_bckg/grape512x512-1.png"); 
+    --body-light-mode: #F8E8E8;
     /* Dark mode  */
     --h1-dark-color: #AD160F;
     --h2-dark-color: #F2E5BD;
     --h3-dark-color: #F8E8E8;
     --p-dark-color: #F0F2F2;
     --logo-dark-mode: url("./../img/logo_black_bckg/grape512x512-2.png");
+   
+    
 }
 
 * {
@@ -61,6 +67,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--body-light-mode);
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -113,7 +120,13 @@ p {
 a {
    text-decoration: none;
    list-style: none;
-
+   font-size: var(--a-font);
+   font-family: var(--a-font-family);
+   color: var(--a-color);
+}
+li,ul {
+    text-decoration: none;
+    list-style: none;
 }
 
 form {
