@@ -16,17 +16,17 @@ app_logout:
     methods: GET
 
 wine_red:
-    path: /wine_red
+    path:       /wine_red
     controller: App\Controller\HomePageController::wine_red
     methods: GET|POST
 
 wine_rose:
-    path: /wine_rose
+    path:       /wine_rose
     controller: App\Controller\HomePageController::wine_rose
     methods: GET|POST
 
 wine_white:
-    path: /wine_white
+    path:       /wine_white
     controller: App\Controller\HomePageController::wine_white
     methods: GET|POST
 # A venir si ont crée un éspace utilisateurs
