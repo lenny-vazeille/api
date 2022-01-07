@@ -21,18 +21,26 @@
 		{% block body %}
 			{% block header %}
 				<header>
+                 <div class="container_identity">
+				    <div class="title">
+						<h1>Wine Search</h1>
+						<p>Le vin j'aime ça !</p>
+			        </div>
+
+                    <img src="{{ asset('img/logo_black_bckg/grape512x512-1.png') }}" alt="logo" >	
+					
 					<ul>
-						<li><a href="{{path('home_page')}}">Home</a></li>
-						<li><a href="{{path('register')}}">Espace consomateur</a></li>
-						<li><a href="{{path('register')}}">Espace Producteur</a></li>
-						<li><a href="{{path('login')}}">Déja inscrit ?</a></li>
-					</ul>
+						<li><a href="{{path('home_page')}}">Home</a> | </li> 
+						<li><a href="{{path('register')}}">Espace consomateur</a> | </li>
+						<li><a href="{{path('register')}}">Espace Producteur</a> | </li>
+						<li><a href="{{path('login')}}">Déja inscrit ?</a>  </li>
+	                </ul>
+					
+                </div>
+				
 				</header>
 			{% endblock %}
-			<div class="title">
-				<h1>Wine Search</h1>
-				<p>Le vin j'aime ça !</p>
-			</div>
+			
 			{% block caroussel %}
 				<div class="container_article">
 					<div class="wine">

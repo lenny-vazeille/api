@@ -26,11 +26,11 @@
 
 /* Font */
 
-@font-face {
+/* @font-face {
     font-family: "Playfair Display', serif";
     src: url("./../Font/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("ttf"), url("./../Font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("ttf");
-}
-
+} */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap%27');
 
 /**  Variables **/
 
@@ -39,9 +39,11 @@
     --h2-font: 4rem;
     --h3-font: 3rem;
     --p-font: 1rem;
-    --a-color: #511201;
+    --p-font-family: Arial, Helvetica, sans-serif;
+    --a-color: #AD160F;
     --a-font: 1rem bold;
-    --a-font-family: "Playfair Display', serif";
+    --a-font-family: "Playfair Display, serif";
+    --a-hover-color: #511201;
     /* Light mode */
     --h1-light-color: #AD160F;
     --h2-light-color: #511201;
@@ -73,10 +75,7 @@ body {
     width: 100%;
 }
 
-ul {
-    display: flex;
-    justify-content: space-around;
-}
+
 
 .form-register {
     display: flex;
@@ -113,6 +112,7 @@ h3 {
 p {
     font-size: var(--p-font);
     display: flex;
+    font-family: var(--p-font-family);
     color: var(--p-light-color);
     justify-content: center;
     align-items: center;
@@ -121,13 +121,36 @@ a {
    text-decoration: none;
    list-style: none;
    font-size: var(--a-font);
-   font-family: var(--a-font-family);
+   font-family: Arial, Helvetica, sans-serif;
    color: var(--a-color);
+   transition: all 300ms ease-in;
+
 }
-li,ul {
-    text-decoration: none;
-    list-style: none;
+a:hover,a:active {
+   font-weight: 600;
+   color: var(--a-hover-color);
+ }
+
+/** HEADER **/
+.container_identity {
+    display: flex;
+    border: solid blue 1px;
+
 }
+.container_identity > li > ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* text-align: left; */
+    width: 20%;
+    border: solid pink 1px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+/* FIN HEADER */
 
 form {
     display: flex;
@@ -150,3 +173,4 @@ form {
     border: solid darkblue 1px;
     border-radius: 1%;
 }
+
