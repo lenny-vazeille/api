@@ -1,29 +1,10 @@
 {% extends 'base.html.twig' %}
 
-
-{% block title %}Article
-{% endblock %}
+{% block title %}Wine App{% endblock %}
 
 {% block body %}
-
-
-	{% for wine_white in wine_whites  %}
-		{# {{article.title}} #}
-		<div class="article text-center">
-			<h1 class="text-center">
-				{{wine_white.titre}}</h1>
-			{# <p class="text-center"> {{article.titre}}</p> #}
-			<div
-				class="article-image">
-				{# <img src={{wine_white.getImageArticle}} alt=""> #}
-				<div class="contenu">
-					<h1>Content</h1>
-					<p>{{wine_white.contenu}}</p>
-
-				</div>
-			</div>
-		</div>
+	{% for wine_white in wine_white %}
+		
+		<h2>{{ wine_white.title}}</h2>
 	{% endfor %}
-
-
 {% endblock %}

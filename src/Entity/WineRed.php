@@ -8,10 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource(
- *      normalizationContext={"groups"={"wine:read"}},
- *      denormalizationContext={"groups"={"wine:write"}}
- * )
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\WineRedRepository")
  */
 class WineRed
@@ -20,49 +17,42 @@ class WineRed
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups("wine:read")
      * 
      */
     private $id;
-
+    
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"wine:read", "wine:write"})
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"wine:read", "wine:write"})
      */
     private $origin;
 
-     /**
+    /**
      * @ORM\Column(type="decimal", precision=5, scale=2)
-     * @Groups({"wine:read", "wine:write"})
      */
     private $liters;
-     /**
+    /**
      * @ORM\Column(type="decimal", precision=5, scale=2)
-     * @Groups({"wine:read", "wine:write"})
+
      */
     private $prices;
-
+    
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"wine:read", "wine:write"})
+     * @ORM\Column(type="string", length=255)
      */
     private $wine_year;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"wine:read", "wine:write"})
+     * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
      * @ORM\Column(type="datetime")
-     * @Groups("wine:read")
      */
     private $published_date;
 
