@@ -2,6 +2,10 @@
 
 ## Git clone repository
 
+```git clone https://github.com/lenny-vazeille/api.git```
+
+### OR
+
 ```git clone https://github.com/sofiane-wattiez/test_jwt.git```
 
 
