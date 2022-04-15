@@ -29,6 +29,19 @@ wine_white:
     path: /wine_white
     controller: App\Controller\HomePageController::wine_white
     methods: GET|POST
+
+api_login_check:
+    path: /api/login_check
+
+# config/routes.yaml
+authentication_token:
+    path: /api/login
+    methods: ['POST']
+
+user:
+    path: /api/user
+    methods: ['POST']
+
 # A venir si ont crée un éspace utilisateurs
 # users:
 #     path: /profile

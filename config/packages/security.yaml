@@ -26,12 +26,30 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        login:
+            pattern: ^/api/login
+            stateless: true
+            # anonymous: true
+            json_login:
+                check_path: /api/login
+                username_path: email
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+        api:
+            pattern:   ^/api
+            stateless: true
+            provider: app_user_provider
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
         main:
             anonymous: false
             lazy: true
+            provider: app_user_provider
             form_login:
-                login_path: login
-                check_path: login
+                login_path: /api/login
+                check_path: /api/login
             logout:
                 path: app_logout
             # activate different ways to authenticate
@@ -42,7 +60,10 @@ security:
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
+    # access_control:
+    #     - { path: ^/api, roles: ROLE_ADMIN }
+    #     - { path: ^/api, roles: ROLE_PRO }
     access_control:
-         - { path: ^/api, roles: ROLE_ADMIN }
-         - { path: ^/api, roles: ROLE_PRO }
+        - { path: ^/api/login, roles: PUBLIC_ACCESS }
+        - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
 
