@@ -48,8 +48,8 @@ security:
             lazy: true
             provider: app_user_provider
             form_login:
-                login_path: /api/login
-                check_path: /api/login
+                login_path: login
+                check_path: login
             logout:
                 path: app_logout
             # activate different ways to authenticate
