@@ -1,7 +1,7 @@
 HTTP/1.1 404 Not Found
-Date: Fri, 15 Apr 2022 09:52:58 GMT
-Server: Apache/2.4.51 (Win64) PHP/7.4.26
-Content-Length: 281
+Date: Mon, 23 May 2022 16:22:22 GMT
+Server: Apache/2.4.51 (Win64) PHP/8.1.0 mod_fcgid/2.3.10-dev
+Content-Length: 301
 Content-Type: text/html; charset=iso-8859-1
 
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
@@ -11,5 +11,5 @@ Content-Type: text/html; charset=iso-8859-1
 <h1>Not Found</h1>
 <p>The requested URL was not found on this server.</p>
 <hr>
-<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+<address>Apache/2.4.51 (Win64) PHP/8.1.0 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
 </body></html>

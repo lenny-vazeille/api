@@ -26,6 +26,18 @@ class SecurityController extends AbstractController
         ]);
     }
     
+
+    #[Route(path:"/api/login", name:"api_login", methods:["POST"] ) ]
+    public function apiLogin(){
+        $user = $this->getUser();
+        return $this->json([
+            'email' => $user->getUserIdentifier(),
+            'roles' => $user->getRoles(),
+        ]);
+    }
+
+
+
     public function login(AuthenticationUtils $authenticationUtils): Response
 {
     // get the login error if there is one
